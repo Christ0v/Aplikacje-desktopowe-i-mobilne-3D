@@ -31,6 +31,8 @@ namespace FirstWinFormsApp
         {
             this.buttonFirst = new System.Windows.Forms.Button();
             this.buttonHello = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonFirst
@@ -42,6 +44,7 @@ namespace FirstWinFormsApp
             this.buttonFirst.TabIndex = 0;
             this.buttonFirst.Text = "Przycisk";
             this.buttonFirst.UseVisualStyleBackColor = true;
+            this.buttonFirst.Click += new System.EventHandler(this.buttonFirst_Click);
             // 
             // buttonHello
             // 
@@ -53,11 +56,29 @@ namespace FirstWinFormsApp
             this.buttonHello.UseVisualStyleBackColor = true;
             this.buttonHello.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(356, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(356, 79);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(228, 23);
+            this.textBox1.TabIndex = 3;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 459);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonHello);
             this.Controls.Add(this.buttonFirst);
             this.MaximizeBox = false;
@@ -65,6 +86,7 @@ namespace FirstWinFormsApp
             this.Text = "Pierwszy program okienkowy";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -72,6 +94,8 @@ namespace FirstWinFormsApp
 
         private System.Windows.Forms.Button buttonFirst;
         private System.Windows.Forms.Button buttonHello;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

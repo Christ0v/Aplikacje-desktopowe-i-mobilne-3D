@@ -31,5 +31,18 @@ namespace FirstWinFormsApp
         {
             MessageBox.Show("Witaj");
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonHelloName_Click(object sender, EventArgs e)
+        {
+            string message = "Witaj " + textBoxName.Text + " w tym programe";
+
+            MessageBox.Show(message);
+            Text = "Przywitałeś się !";
+        }
     }
 }

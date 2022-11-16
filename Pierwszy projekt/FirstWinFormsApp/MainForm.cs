@@ -17,32 +17,42 @@ namespace FirstWinFormsApp
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonFirst_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Witaj w pierwszym programie WinForms");
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Witaj");
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonHelloName_Click(object sender, EventArgs e)
         {
-            string message = "Witaj " + textBoxName.Text + " w tym programe";
+            string strAge = textBoxAge.Text;
+            if (String.IsNullOrWhiteSpace(strAge))
+            {
+                MessageBox.Show("Nie podano wieku");
+                return;
+            }
 
+            int age;//= int.Parse(strAge);
+            if (!int.TryParse(strAge, out age))
+            {
+                MessageBox.Show("Wiek nie jest liczbą");
+                return;
+            }
+
+            if (age < 1)
+            {
+                MessageBox.Show("Podano wiek ujemny");
+                return;
+            }
+
+            string message = "";
+            if (age >= 18)
+                message = " Jesteś pełnoletni! ";
+            else 
+                message = " Nie jesteś pełnoletni :( ";
+
+
+            message = "Witaj " + textBoxName.Text + " w tym programie\n" + message;
             MessageBox.Show(message);
-            Text = "Przywitałeś się !";
         }
     }
 }

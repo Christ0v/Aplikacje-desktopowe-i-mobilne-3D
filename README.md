@@ -1,1 +1,1 @@
-# Aplikacje-desktopowe-i-mobilne-3D
+# klasa-2d-2021-2022

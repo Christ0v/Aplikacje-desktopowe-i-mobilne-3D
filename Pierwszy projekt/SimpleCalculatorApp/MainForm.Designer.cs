@@ -29,6 +29,7 @@ namespace SimpleCalculatorApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.labelFirstNumber = new System.Windows.Forms.Label();
             this.textBoxFirstNumber = new System.Windows.Forms.TextBox();
             this.labelSecondNumber = new System.Windows.Forms.Label();
@@ -43,7 +44,7 @@ namespace SimpleCalculatorApp
             // labelFirstNumber
             // 
             this.labelFirstNumber.AutoSize = true;
-            this.labelFirstNumber.Location = new System.Drawing.Point(188, 38);
+            this.labelFirstNumber.Location = new System.Drawing.Point(73, 46);
             this.labelFirstNumber.Name = "labelFirstNumber";
             this.labelFirstNumber.Size = new System.Drawing.Size(85, 15);
             this.labelFirstNumber.TabIndex = 0;
@@ -51,15 +52,15 @@ namespace SimpleCalculatorApp
             // 
             // textBoxFirstNumber
             // 
-            this.textBoxFirstNumber.Location = new System.Drawing.Point(188, 56);
+            this.textBoxFirstNumber.Location = new System.Drawing.Point(30, 65);
             this.textBoxFirstNumber.Name = "textBoxFirstNumber";
-            this.textBoxFirstNumber.Size = new System.Drawing.Size(100, 23);
+            this.textBoxFirstNumber.Size = new System.Drawing.Size(171, 23);
             this.textBoxFirstNumber.TabIndex = 1;
             // 
             // labelSecondNumber
             // 
             this.labelSecondNumber.AutoSize = true;
-            this.labelSecondNumber.Location = new System.Drawing.Point(446, 37);
+            this.labelSecondNumber.Location = new System.Drawing.Point(266, 46);
             this.labelSecondNumber.Name = "labelSecondNumber";
             this.labelSecondNumber.Size = new System.Drawing.Size(72, 15);
             this.labelSecondNumber.TabIndex = 2;
@@ -67,16 +68,16 @@ namespace SimpleCalculatorApp
             // 
             // textBoxSecondNumber
             // 
-            this.textBoxSecondNumber.Location = new System.Drawing.Point(446, 56);
+            this.textBoxSecondNumber.Location = new System.Drawing.Point(221, 65);
             this.textBoxSecondNumber.Name = "textBoxSecondNumber";
-            this.textBoxSecondNumber.Size = new System.Drawing.Size(100, 23);
+            this.textBoxSecondNumber.Size = new System.Drawing.Size(167, 23);
             this.textBoxSecondNumber.TabIndex = 3;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(188, 102);
+            this.buttonAdd.Location = new System.Drawing.Point(30, 111);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(85, 56);
             this.buttonAdd.TabIndex = 4;
             this.buttonAdd.Text = "+";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -84,27 +85,28 @@ namespace SimpleCalculatorApp
             // 
             // buttonSub
             // 
-            this.buttonSub.Location = new System.Drawing.Point(284, 102);
+            this.buttonSub.Location = new System.Drawing.Point(126, 111);
             this.buttonSub.Name = "buttonSub";
-            this.buttonSub.Size = new System.Drawing.Size(75, 23);
+            this.buttonSub.Size = new System.Drawing.Size(75, 56);
             this.buttonSub.TabIndex = 5;
             this.buttonSub.Text = "-";
             this.buttonSub.UseVisualStyleBackColor = true;
+            this.buttonSub.Click += new System.EventHandler(this.buttonSub_Click);
             // 
             // buttonMul
             // 
-            this.buttonMul.Location = new System.Drawing.Point(379, 102);
+            this.buttonMul.Location = new System.Drawing.Point(221, 111);
             this.buttonMul.Name = "buttonMul";
-            this.buttonMul.Size = new System.Drawing.Size(75, 23);
+            this.buttonMul.Size = new System.Drawing.Size(75, 56);
             this.buttonMul.TabIndex = 6;
             this.buttonMul.Text = "*";
             this.buttonMul.UseVisualStyleBackColor = true;
             // 
             // buttonDiv
             // 
-            this.buttonDiv.Location = new System.Drawing.Point(471, 102);
+            this.buttonDiv.Location = new System.Drawing.Point(313, 111);
             this.buttonDiv.Name = "buttonDiv";
-            this.buttonDiv.Size = new System.Drawing.Size(75, 23);
+            this.buttonDiv.Size = new System.Drawing.Size(75, 56);
             this.buttonDiv.TabIndex = 7;
             this.buttonDiv.Text = "/";
             this.buttonDiv.UseVisualStyleBackColor = true;
@@ -112,7 +114,7 @@ namespace SimpleCalculatorApp
             // labelResult
             // 
             this.labelResult.AutoSize = true;
-            this.labelResult.Location = new System.Drawing.Point(618, 56);
+            this.labelResult.Location = new System.Drawing.Point(30, 152);
             this.labelResult.Name = "labelResult";
             this.labelResult.Size = new System.Drawing.Size(0, 15);
             this.labelResult.TabIndex = 8;
@@ -121,7 +123,9 @@ namespace SimpleCalculatorApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 456);
+            this.BackColor = System.Drawing.Color.Green;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1040, 461);
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.buttonDiv);
             this.Controls.Add(this.buttonMul);

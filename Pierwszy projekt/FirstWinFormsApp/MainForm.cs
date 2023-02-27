@@ -46,12 +46,11 @@ namespace FirstWinFormsApp
 
             string message = "";
             if (age >= 18)
-                message = " Jesteś pełnoletni! ";
-            else 
-                message = " Nie jesteś pełnoletni :( ";
+                message = "Jesteś pełnoletni.";
+            else
+                message = "Jesteś niepełnoletni";
 
-
-            message = "Witaj " + textBoxName.Text + " w tym programie\n" + message;
+           message = "Witaj " + textBoxName.Text + " w tym programie\n" + message;
             MessageBox.Show(message);
         }
     }

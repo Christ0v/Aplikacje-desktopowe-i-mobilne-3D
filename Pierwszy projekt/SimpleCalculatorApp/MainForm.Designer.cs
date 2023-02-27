@@ -29,11 +29,10 @@ namespace SimpleCalculatorApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.labelFirstNumber = new System.Windows.Forms.Label();
-            this.textBoxFirstNumber = new System.Windows.Forms.TextBox();
-            this.labelSecondNumber = new System.Windows.Forms.Label();
+            this.textBoxFirsNumber = new System.Windows.Forms.TextBox();
             this.textBoxSecondNumber = new System.Windows.Forms.TextBox();
+            this.labelSecondNumber = new System.Windows.Forms.Label();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonSub = new System.Windows.Forms.Button();
             this.buttonMul = new System.Windows.Forms.Button();
@@ -44,40 +43,40 @@ namespace SimpleCalculatorApp
             // labelFirstNumber
             // 
             this.labelFirstNumber.AutoSize = true;
-            this.labelFirstNumber.Location = new System.Drawing.Point(73, 46);
+            this.labelFirstNumber.Location = new System.Drawing.Point(56, 27);
             this.labelFirstNumber.Name = "labelFirstNumber";
-            this.labelFirstNumber.Size = new System.Drawing.Size(85, 15);
+            this.labelFirstNumber.Size = new System.Drawing.Size(88, 15);
             this.labelFirstNumber.TabIndex = 0;
-            this.labelFirstNumber.Text = "Pierwsza liczba";
+            this.labelFirstNumber.Text = "Pierwsza liczba:";
             // 
-            // textBoxFirstNumber
+            // textBoxFirsNumber
             // 
-            this.textBoxFirstNumber.Location = new System.Drawing.Point(30, 65);
-            this.textBoxFirstNumber.Name = "textBoxFirstNumber";
-            this.textBoxFirstNumber.Size = new System.Drawing.Size(171, 23);
-            this.textBoxFirstNumber.TabIndex = 1;
+            this.textBoxFirsNumber.Location = new System.Drawing.Point(56, 45);
+            this.textBoxFirsNumber.Name = "textBoxFirsNumber";
+            this.textBoxFirsNumber.Size = new System.Drawing.Size(100, 23);
+            this.textBoxFirsNumber.TabIndex = 1;
+            // 
+            // textBoxSecondNumber
+            // 
+            this.textBoxSecondNumber.Location = new System.Drawing.Point(183, 45);
+            this.textBoxSecondNumber.Name = "textBoxSecondNumber";
+            this.textBoxSecondNumber.Size = new System.Drawing.Size(100, 23);
+            this.textBoxSecondNumber.TabIndex = 3;
             // 
             // labelSecondNumber
             // 
             this.labelSecondNumber.AutoSize = true;
-            this.labelSecondNumber.Location = new System.Drawing.Point(266, 46);
+            this.labelSecondNumber.Location = new System.Drawing.Point(183, 27);
             this.labelSecondNumber.Name = "labelSecondNumber";
-            this.labelSecondNumber.Size = new System.Drawing.Size(72, 15);
+            this.labelSecondNumber.Size = new System.Drawing.Size(75, 15);
             this.labelSecondNumber.TabIndex = 2;
-            this.labelSecondNumber.Text = "Druga liczba";
-            // 
-            // textBoxSecondNumber
-            // 
-            this.textBoxSecondNumber.Location = new System.Drawing.Point(221, 65);
-            this.textBoxSecondNumber.Name = "textBoxSecondNumber";
-            this.textBoxSecondNumber.Size = new System.Drawing.Size(167, 23);
-            this.textBoxSecondNumber.TabIndex = 3;
+            this.labelSecondNumber.Text = "Druga liczba:";
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(30, 111);
+            this.buttonAdd.Location = new System.Drawing.Point(19, 95);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(85, 56);
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
             this.buttonAdd.TabIndex = 4;
             this.buttonAdd.Text = "+";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -85,9 +84,9 @@ namespace SimpleCalculatorApp
             // 
             // buttonSub
             // 
-            this.buttonSub.Location = new System.Drawing.Point(126, 111);
+            this.buttonSub.Location = new System.Drawing.Point(100, 95);
             this.buttonSub.Name = "buttonSub";
-            this.buttonSub.Size = new System.Drawing.Size(75, 56);
+            this.buttonSub.Size = new System.Drawing.Size(75, 23);
             this.buttonSub.TabIndex = 5;
             this.buttonSub.Text = "-";
             this.buttonSub.UseVisualStyleBackColor = true;
@@ -95,18 +94,18 @@ namespace SimpleCalculatorApp
             // 
             // buttonMul
             // 
-            this.buttonMul.Location = new System.Drawing.Point(221, 111);
+            this.buttonMul.Location = new System.Drawing.Point(181, 95);
             this.buttonMul.Name = "buttonMul";
-            this.buttonMul.Size = new System.Drawing.Size(75, 56);
+            this.buttonMul.Size = new System.Drawing.Size(75, 23);
             this.buttonMul.TabIndex = 6;
             this.buttonMul.Text = "*";
             this.buttonMul.UseVisualStyleBackColor = true;
             // 
             // buttonDiv
             // 
-            this.buttonDiv.Location = new System.Drawing.Point(313, 111);
+            this.buttonDiv.Location = new System.Drawing.Point(262, 95);
             this.buttonDiv.Name = "buttonDiv";
-            this.buttonDiv.Size = new System.Drawing.Size(75, 56);
+            this.buttonDiv.Size = new System.Drawing.Size(75, 23);
             this.buttonDiv.TabIndex = 7;
             this.buttonDiv.Text = "/";
             this.buttonDiv.UseVisualStyleBackColor = true;
@@ -114,7 +113,7 @@ namespace SimpleCalculatorApp
             // labelResult
             // 
             this.labelResult.AutoSize = true;
-            this.labelResult.Location = new System.Drawing.Point(30, 152);
+            this.labelResult.Location = new System.Drawing.Point(19, 143);
             this.labelResult.Name = "labelResult";
             this.labelResult.Size = new System.Drawing.Size(0, 15);
             this.labelResult.TabIndex = 8;
@@ -123,9 +122,7 @@ namespace SimpleCalculatorApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Green;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1040, 461);
+            this.ClientSize = new System.Drawing.Size(372, 178);
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.buttonDiv);
             this.Controls.Add(this.buttonMul);
@@ -133,11 +130,11 @@ namespace SimpleCalculatorApp
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.textBoxSecondNumber);
             this.Controls.Add(this.labelSecondNumber);
-            this.Controls.Add(this.textBoxFirstNumber);
+            this.Controls.Add(this.textBoxFirsNumber);
             this.Controls.Add(this.labelFirstNumber);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
-            this.Text = "Prosty kalkulator ";
+            this.Text = "Prosty kalkulator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,9 +143,9 @@ namespace SimpleCalculatorApp
         #endregion
 
         private System.Windows.Forms.Label labelFirstNumber;
-        private System.Windows.Forms.TextBox textBoxFirstNumber;
-        private System.Windows.Forms.Label labelSecondNumber;
+        private System.Windows.Forms.TextBox textBoxFirsNumber;
         private System.Windows.Forms.TextBox textBoxSecondNumber;
+        private System.Windows.Forms.Label labelSecondNumber;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonSub;
         private System.Windows.Forms.Button buttonMul;

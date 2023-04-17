@@ -30,7 +30,7 @@ namespace TestApp
             if (checkBoxPytanie3B.Checked && checkBoxPytanie3C.Checked && (checkBoxPytanie3A.Checked == false) && (checkBoxPytanie3D.Checked == false))
                 wynik++;
 
-            if(textBoxPytanie4Odp.Text == "Ziemia")
+            if(textBoxPytanie4.Text.ToLower().Trim() == "ziemia")
                 wynik++;
             MessageBox.Show("Zdobyłeś " + wynik + " na 4 punkty");
 

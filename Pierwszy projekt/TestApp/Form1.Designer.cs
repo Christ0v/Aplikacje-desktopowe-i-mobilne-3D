@@ -49,7 +49,7 @@ namespace TestApp
             this.label3 = new System.Windows.Forms.Label();
             this.buttonCheck = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBoxPytanie4Odp = new System.Windows.Forms.TextBox();
+            this.textBoxPytanie4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupPytanie1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -269,7 +269,7 @@ namespace TestApp
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBoxPytanie4Odp);
+            this.groupBox4.Controls.Add(this.textBoxPytanie4);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Location = new System.Drawing.Point(18, 267);
             this.groupBox4.Name = "groupBox4";
@@ -278,12 +278,12 @@ namespace TestApp
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Pytanie 4";
             // 
-            // textBoxPytanie4Odp
+            // textBoxPytanie4
             // 
-            this.textBoxPytanie4Odp.Location = new System.Drawing.Point(10, 82);
-            this.textBoxPytanie4Odp.Name = "textBoxPytanie4Odp";
-            this.textBoxPytanie4Odp.Size = new System.Drawing.Size(219, 23);
-            this.textBoxPytanie4Odp.TabIndex = 1;
+            this.textBoxPytanie4.Location = new System.Drawing.Point(10, 82);
+            this.textBoxPytanie4.Name = "textBoxPytanie4";
+            this.textBoxPytanie4.Size = new System.Drawing.Size(219, 23);
+            this.textBoxPytanie4.TabIndex = 1;
             // 
             // label4
             // 
@@ -342,7 +342,7 @@ namespace TestApp
         private System.Windows.Forms.CheckBox checkBoxPytanie3D;
         private System.Windows.Forms.Button buttonCheck;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBoxPytanie4Odp;
+        private System.Windows.Forms.TextBox textBoxPytanie4;
         private System.Windows.Forms.Label label4;
     }
 }

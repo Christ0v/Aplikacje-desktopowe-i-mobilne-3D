@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="250px-Scout_taunt_laugh.png" />
+    <None Remove="aparat.png" />
+    <None Remove="png-clipart-digital-graphy-camera-photography-logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="250px-Scout_taunt_laugh.png" />
+    <Resource Include="aparat.png" />
+    <Resource Include="png-clipart-digital-graphy-camera-photography-logo.png" />
+  </ItemGroup>
+
+</Project>

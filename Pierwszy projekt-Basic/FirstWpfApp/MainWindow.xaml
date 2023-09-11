@@ -43,18 +43,18 @@
         <Button Canvas.Left="345" 
                 Canvas.Top="354">
             <WrapPanel Height="24" Width="109" RenderTransformOrigin="0.47,0.575">
-                <TextBlock Margin="0 0 20 0">Kolejny</TextBlock>
+                <TextBlock Margin="0 0 10 0">Kolejny</TextBlock>
                 <TextBlock Foreground="red">przycisk</TextBlock>
             </WrapPanel>
         </Button>
 
         <TextBox Text="Zawartość" 
-                 Canvas.Left="619" 
-                 Canvas.Top="305"
+                 Canvas.Left="365" 
+                 Canvas.Top="250"
                  Name="valueTextBox"/>
         <Button Content="No dajesz kliknij"
-                Canvas.Left="604" 
-                Canvas.Top="279"
+                Canvas.Left="350" 
+                Canvas.Top="225"
                 Click="Button_Click_1"/>
 
     </Canvas>

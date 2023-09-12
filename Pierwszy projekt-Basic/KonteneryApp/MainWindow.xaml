@@ -20,7 +20,12 @@
         <Button Content="DockPanel" 
          Canvas.Left="200" 
          Canvas.Top="80"
-         Click="ButtonDockPanel_Click"
- />
+         Click="ButtonDockPanel_Click"/>
+        <Button Content="GridPanel" 
+        Canvas.Left="300" 
+        Canvas.Top="80"
+        Click="ButtonGridPanel_Click"/>
+        
+
     </Canvas>
 </Window>

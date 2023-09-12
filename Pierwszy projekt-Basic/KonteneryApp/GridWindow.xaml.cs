@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace KonteneryApp
 {
     /// <summary>
-    /// Interaction logic for DockPanelWindow.xaml
+    /// Interaction logic for GridWindow.xaml
     /// </summary>
-    public partial class DockPanelWindow : Window
+    public partial class GridWindow : Window
     {
-        public DockPanelWindow()
+        public GridWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

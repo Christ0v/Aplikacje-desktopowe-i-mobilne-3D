@@ -21,7 +21,6 @@ namespace ClockWinFormsApp
 
         private void buttonReadTime_Click(object sender, EventArgs e)
         {
-               
             labelClock.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
@@ -43,14 +42,14 @@ namespace ClockWinFormsApp
 
         private void timerStopWatch_Tick(object sender, EventArgs e)
         {
-            timeStopWatch++;                 
+            timeStopWatch++;
             labelStopWatch.Text = timeStopWatch.ToString();
-           // błąd pomiaru
         }
+
 
         private DateTime timeStart;
 
-        private void stopWatchDeltaStart_Click(object sender, EventArgs e)
+        private void buttonStopWatchDeltaStart_Click(object sender, EventArgs e)
         {
             timeStart = DateTime.Now;
             timerStopWatchDelta.Enabled = true;

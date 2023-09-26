@@ -11,10 +11,10 @@ using System.Windows.Forms;
 namespace TicTacToeWinFormApp
 {
     enum GameStatus
-    { 
+    {
         Win,
         Draw,
-        Game,
+        Game
     }
 
     public partial class MainForm : Form
@@ -28,7 +28,7 @@ namespace TicTacToeWinFormApp
         {
             InitializeComponent();
             comboBoxWhoStartGame.SelectedIndex = 0;
-            players[0] = "0";
+            players[0] = "O";
             players[1] = "X";
             buttonBoard[0, 0] = buttonPosition00;
             buttonBoard[1, 0] = buttonPosition10;
@@ -44,14 +44,10 @@ namespace TicTacToeWinFormApp
         private void buttonNewGame_Click(object sender, EventArgs e)
         {
             currentPlayerNumber = comboBoxWhoStartGame.SelectedIndex;
+
             for (int col = 0; col < 3; col++)
-            {
                 for (int row = 0; row < 3; row++)
-                {
                     buttonBoard[col, row].Text = "";
-                }
-            
-            }
 
             tableLayoutPanelBoard.Visible = true;
         }
@@ -73,14 +69,14 @@ namespace TicTacToeWinFormApp
 
             if (gameStatus == GameStatus.Win)
             {
-                MessageBox.Show("Wygrana " + players[currentPlayerNumber] + "!!!!");
+                MessageBox.Show("Wygrana " + players[currentPlayerNumber] + "!!!!!!!");
                 tableLayoutPanelBoard.Visible = false;
                 return;
             }
 
             if (gameStatus == GameStatus.Draw)
             {
-                MessageBox.Show("Remis :(" );
+                MessageBox.Show("Remis !!!!!!!");
                 tableLayoutPanelBoard.Visible = false;
                 return;
             }
@@ -103,38 +99,31 @@ namespace TicTacToeWinFormApp
 
         private GameStatus CheckWin(int currentPlayerNumber)
         {
-            /*if (buttonPosition00.Text == players[currentPlayerNumber]
-                && buttonPosition10.Text == players[currentPlayerNumber]
-                && buttonPosition20.Text == players[currentPlayerNumber])
-                return true; */
-
             for (int col = 0; col < 3; col++)
             {
-               if(buttonBoard[col, 0].Text == players[currentPlayerNumber]
-                && buttonBoard[col, 1].Text == players[currentPlayerNumber]
-                && buttonBoard[col, 2].Text == players[currentPlayerNumber])
-                return GameStatus.Win;
-
+                if (buttonBoard[col, 0].Text == players[currentPlayerNumber]
+                    && buttonBoard[col, 1].Text == players[currentPlayerNumber]
+                    && buttonBoard[col, 2].Text == players[currentPlayerNumber])
+                    return GameStatus.Win;
             }
 
             for (int row = 0; row < 3; row++)
             {
-                if(buttonBoard[0, row].Text == players[currentPlayerNumber]
-                && buttonBoard[1, row].Text == players[currentPlayerNumber]
-                && buttonBoard[2, row].Text == players[currentPlayerNumber])
-                return GameStatus.Win;
-
+                if (buttonBoard[0, row].Text == players[currentPlayerNumber]
+                    && buttonBoard[1, row].Text == players[currentPlayerNumber]
+                    && buttonBoard[2, row].Text == players[currentPlayerNumber])
+                    return GameStatus.Win;
             }
 
             if (buttonBoard[0, 0].Text == players[currentPlayerNumber]
-            && buttonBoard[1, 1].Text == players[currentPlayerNumber]
-            && buttonBoard[2, 2].Text == players[currentPlayerNumber])
-            return GameStatus.Win;
+                && buttonBoard[1, 1].Text == players[currentPlayerNumber]
+                && buttonBoard[2, 2].Text == players[currentPlayerNumber])
+                return GameStatus.Win;
 
             if (buttonBoard[2, 0].Text == players[currentPlayerNumber]
-            && buttonBoard[1, 1].Text == players[currentPlayerNumber]
-            && buttonBoard[0, 2].Text == players[currentPlayerNumber])
-            return GameStatus.Win;
+                && buttonBoard[1, 1].Text == players[currentPlayerNumber]
+                && buttonBoard[0, 2].Text == players[currentPlayerNumber])
+                return GameStatus.Win;
 
             bool isDraw = true;
             for (int col = 0; col < 3; col++)
@@ -144,7 +133,7 @@ namespace TicTacToeWinFormApp
 
             if (isDraw)
                 return GameStatus.Draw;
-       
+
             return GameStatus.Game;
         }
     }

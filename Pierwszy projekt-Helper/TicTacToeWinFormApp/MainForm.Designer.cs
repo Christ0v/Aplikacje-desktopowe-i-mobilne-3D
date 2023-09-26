@@ -49,14 +49,13 @@ namespace TicTacToeWinFormApp
             // 
             // panelConfigGame
             // 
-            this.panelConfigGame.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panelConfigGame.Controls.Add(this.labelWhoStartGame);
             this.panelConfigGame.Controls.Add(this.comboBoxWhoStartGame);
             this.panelConfigGame.Controls.Add(this.buttonNewGame);
             this.panelConfigGame.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelConfigGame.Location = new System.Drawing.Point(0, 0);
             this.panelConfigGame.Name = "panelConfigGame";
-            this.panelConfigGame.Size = new System.Drawing.Size(612, 75);
+            this.panelConfigGame.Size = new System.Drawing.Size(335, 75);
             this.panelConfigGame.TabIndex = 4;
             // 
             // labelWhoStartGame
@@ -92,7 +91,7 @@ namespace TicTacToeWinFormApp
             // 
             // tableLayoutPanelBoard
             // 
-            this.tableLayoutPanelBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.tableLayoutPanelBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tableLayoutPanelBoard.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.tableLayoutPanelBoard.ColumnCount = 3;
             this.tableLayoutPanelBoard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
@@ -114,7 +113,7 @@ namespace TicTacToeWinFormApp
             this.tableLayoutPanelBoard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanelBoard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanelBoard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34F));
-            this.tableLayoutPanelBoard.Size = new System.Drawing.Size(612, 317);
+            this.tableLayoutPanelBoard.Size = new System.Drawing.Size(335, 260);
             this.tableLayoutPanelBoard.TabIndex = 5;
             this.tableLayoutPanelBoard.Visible = false;
             // 
@@ -124,7 +123,7 @@ namespace TicTacToeWinFormApp
             this.buttonPosition00.Location = new System.Drawing.Point(13, 13);
             this.buttonPosition00.Margin = new System.Windows.Forms.Padding(10);
             this.buttonPosition00.Name = "buttonPosition00";
-            this.buttonPosition00.Size = new System.Drawing.Size(178, 80);
+            this.buttonPosition00.Size = new System.Drawing.Size(86, 61);
             this.buttonPosition00.TabIndex = 0;
             this.buttonPosition00.UseVisualStyleBackColor = true;
             this.buttonPosition00.Click += new System.EventHandler(this.buttonPosition_Click);
@@ -132,10 +131,10 @@ namespace TicTacToeWinFormApp
             // buttonPosition10
             // 
             this.buttonPosition10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonPosition10.Location = new System.Drawing.Point(214, 13);
+            this.buttonPosition10.Location = new System.Drawing.Point(122, 13);
             this.buttonPosition10.Margin = new System.Windows.Forms.Padding(10);
             this.buttonPosition10.Name = "buttonPosition10";
-            this.buttonPosition10.Size = new System.Drawing.Size(178, 80);
+            this.buttonPosition10.Size = new System.Drawing.Size(86, 61);
             this.buttonPosition10.TabIndex = 1;
             this.buttonPosition10.UseVisualStyleBackColor = true;
             this.buttonPosition10.Click += new System.EventHandler(this.buttonPosition_Click);
@@ -143,10 +142,10 @@ namespace TicTacToeWinFormApp
             // buttonPosition20
             // 
             this.buttonPosition20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonPosition20.Location = new System.Drawing.Point(415, 13);
+            this.buttonPosition20.Location = new System.Drawing.Point(231, 13);
             this.buttonPosition20.Margin = new System.Windows.Forms.Padding(10);
             this.buttonPosition20.Name = "buttonPosition20";
-            this.buttonPosition20.Size = new System.Drawing.Size(184, 80);
+            this.buttonPosition20.Size = new System.Drawing.Size(91, 61);
             this.buttonPosition20.TabIndex = 2;
             this.buttonPosition20.UseVisualStyleBackColor = true;
             this.buttonPosition20.Click += new System.EventHandler(this.buttonPosition_Click);
@@ -154,10 +153,10 @@ namespace TicTacToeWinFormApp
             // buttonPosition01
             // 
             this.buttonPosition01.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonPosition01.Location = new System.Drawing.Point(13, 116);
+            this.buttonPosition01.Location = new System.Drawing.Point(13, 97);
             this.buttonPosition01.Margin = new System.Windows.Forms.Padding(10);
             this.buttonPosition01.Name = "buttonPosition01";
-            this.buttonPosition01.Size = new System.Drawing.Size(178, 80);
+            this.buttonPosition01.Size = new System.Drawing.Size(86, 61);
             this.buttonPosition01.TabIndex = 3;
             this.buttonPosition01.UseVisualStyleBackColor = true;
             this.buttonPosition01.Click += new System.EventHandler(this.buttonPosition_Click);
@@ -165,10 +164,10 @@ namespace TicTacToeWinFormApp
             // buttonPosition11
             // 
             this.buttonPosition11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonPosition11.Location = new System.Drawing.Point(214, 116);
+            this.buttonPosition11.Location = new System.Drawing.Point(122, 97);
             this.buttonPosition11.Margin = new System.Windows.Forms.Padding(10);
             this.buttonPosition11.Name = "buttonPosition11";
-            this.buttonPosition11.Size = new System.Drawing.Size(178, 80);
+            this.buttonPosition11.Size = new System.Drawing.Size(86, 61);
             this.buttonPosition11.TabIndex = 4;
             this.buttonPosition11.UseVisualStyleBackColor = true;
             this.buttonPosition11.Click += new System.EventHandler(this.buttonPosition_Click);
@@ -176,10 +175,10 @@ namespace TicTacToeWinFormApp
             // buttonPosition21
             // 
             this.buttonPosition21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonPosition21.Location = new System.Drawing.Point(415, 116);
+            this.buttonPosition21.Location = new System.Drawing.Point(231, 97);
             this.buttonPosition21.Margin = new System.Windows.Forms.Padding(10);
             this.buttonPosition21.Name = "buttonPosition21";
-            this.buttonPosition21.Size = new System.Drawing.Size(184, 80);
+            this.buttonPosition21.Size = new System.Drawing.Size(91, 61);
             this.buttonPosition21.TabIndex = 5;
             this.buttonPosition21.UseVisualStyleBackColor = true;
             this.buttonPosition21.Click += new System.EventHandler(this.buttonPosition_Click);
@@ -187,10 +186,10 @@ namespace TicTacToeWinFormApp
             // buttonPosition22
             // 
             this.buttonPosition22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonPosition22.Location = new System.Drawing.Point(415, 219);
+            this.buttonPosition22.Location = new System.Drawing.Point(231, 181);
             this.buttonPosition22.Margin = new System.Windows.Forms.Padding(10);
             this.buttonPosition22.Name = "buttonPosition22";
-            this.buttonPosition22.Size = new System.Drawing.Size(184, 85);
+            this.buttonPosition22.Size = new System.Drawing.Size(91, 66);
             this.buttonPosition22.TabIndex = 6;
             this.buttonPosition22.UseVisualStyleBackColor = true;
             this.buttonPosition22.Click += new System.EventHandler(this.buttonPosition_Click);
@@ -198,10 +197,10 @@ namespace TicTacToeWinFormApp
             // buttonPosition12
             // 
             this.buttonPosition12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonPosition12.Location = new System.Drawing.Point(214, 219);
+            this.buttonPosition12.Location = new System.Drawing.Point(122, 181);
             this.buttonPosition12.Margin = new System.Windows.Forms.Padding(10);
             this.buttonPosition12.Name = "buttonPosition12";
-            this.buttonPosition12.Size = new System.Drawing.Size(178, 85);
+            this.buttonPosition12.Size = new System.Drawing.Size(86, 66);
             this.buttonPosition12.TabIndex = 7;
             this.buttonPosition12.UseVisualStyleBackColor = true;
             this.buttonPosition12.Click += new System.EventHandler(this.buttonPosition_Click);
@@ -209,10 +208,10 @@ namespace TicTacToeWinFormApp
             // buttonPosition02
             // 
             this.buttonPosition02.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonPosition02.Location = new System.Drawing.Point(13, 219);
+            this.buttonPosition02.Location = new System.Drawing.Point(13, 181);
             this.buttonPosition02.Margin = new System.Windows.Forms.Padding(10);
             this.buttonPosition02.Name = "buttonPosition02";
-            this.buttonPosition02.Size = new System.Drawing.Size(178, 85);
+            this.buttonPosition02.Size = new System.Drawing.Size(86, 66);
             this.buttonPosition02.TabIndex = 8;
             this.buttonPosition02.UseVisualStyleBackColor = true;
             this.buttonPosition02.Click += new System.EventHandler(this.buttonPosition_Click);
@@ -221,7 +220,7 @@ namespace TicTacToeWinFormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 392);
+            this.ClientSize = new System.Drawing.Size(335, 335);
             this.Controls.Add(this.tableLayoutPanelBoard);
             this.Controls.Add(this.panelConfigGame);
             this.MinimumSize = new System.Drawing.Size(351, 374);

@@ -1,0 +1,48 @@
+﻿<Window x:Class="FirstTaskWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstTaskWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <TextBlock Text="Podaj informacje" FontSize = "50"
+                   Foreground="Red"
+                   TextAlignment="Center"
+                   Grid.Column="0" 
+                   Grid.Row="0" 
+                   Grid.ColumnSpan ="2" 
+                   Grid.RowSpan="2"
+                   FontWeight="Bold"/>
+        <TextBlock Text="Imię:" 
+                   FontSize="30"
+                   Grid.Column="0" 
+                   Grid.Row="1"
+                   TextAlignment="Center" />
+        <TextBlock Text="Wiek:" 
+                   FontSize="30"                
+                   Grid.Column="0" 
+                   Grid.Row="2" 
+                   TextAlignment="Center"/>
+        <TextBox  Width="200"
+                  Height="25"                 
+                  Grid.Column="2" Grid.Row="1"
+                  TextAlignment="Center"/>
+        <TextBox Height="25" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" Width="200" TextAlignment="Center" />
+        <Button Content="Wykonaj" Height="30" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" />
+
+    </Grid>
+</Window>

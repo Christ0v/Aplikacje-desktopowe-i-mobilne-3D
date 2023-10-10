@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FirstTaskWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" >
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="232" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="*"/>
@@ -17,7 +17,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Podaj informacje" FontSize = "50"
                    Foreground="Red"
@@ -31,18 +31,42 @@
                    FontSize="30"
                    Grid.Column="0" 
                    Grid.Row="1"
-                   TextAlignment="Center" />
+                   TextAlignment="Center" 
+                    />
         <TextBlock Text="Wiek:" 
                    FontSize="30"                
                    Grid.Column="0" 
                    Grid.Row="2" 
-                   TextAlignment="Center"/>
+                   TextAlignment="Center"
+                   />
         <TextBox  Width="200"
                   Height="25"                 
                   Grid.Column="2" Grid.Row="1"
-                  TextAlignment="Center"/>
-        <TextBox Height="25" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" Width="200" TextAlignment="Center" />
-        <Button Content="Wykonaj" Height="30" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" />
+                  TextAlignment="Center"
+                  Name="textBoxUserName"/>
+        <TextBox Height="25" 
+                 VerticalAlignment="Center" 
+                 Grid.Column="2" 
+                 Grid.Row="2" 
+                 HorizontalAlignment="Center" 
+                 Width="200" 
+                 TextAlignment="Center" 
+                 Name="textBoxAge"/>
+        <Button Content="Wykonaj" 
+                Height="30" 
+                HorizontalAlignment="Center" 
+                Grid.Column="0"
+                Grid.Row="3" 
+                Grid.ColumnSpan="2"
+                Click="Button_Click"/>
+        <TextBlock Height="25"
+                 VerticalAlignment="Center" 
+                 Grid.Column="2" 
+                 Grid.Row="5"
+                 HorizontalAlignment="Center" 
+                 Width="200" 
+                 TextAlignment="Center"
+                 Name="textBlockResult"/>
 
     </Grid>
 </Window>

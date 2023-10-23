@@ -27,36 +27,37 @@ namespace BMICalculator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            float result;
-            result = (float.Parse(textBoxBodyWeight.Text) / ((float.Parse(textBoxHeight.Text)/100) * (float.Parse(textBoxHeight.Text)/100)));
-
-            if (textBoxBodyWeight.Text == "")
+            if (!float.TryParse(textBoxBodyWeight.Text, out float weight) || string.IsNullOrEmpty(textBoxBodyWeight.Text))
             {
                 textBlockResult.Text = "Nie podano masy ciała";
             }
-            if (textBoxHeight.Text == "")
+            else if (!float.TryParse(textBoxHeight.Text, out float height) || string.IsNullOrEmpty(textBoxHeight.Text))
             {
                 textBlockResult.Text = "Nie podano wysokości";
+            }       
+            else
+            {
+                float result;
+                result = (weight / ((height / 100) * (height / 100)));
+                if (textBoxHeight.Text == "" && textBoxBodyWeight.Text == "")
+                    textBlockResult.Text = "Nie podałeś ani wagi ani wzrostu";
+                if (result < 16f)
+                    textBlockResult.Text = "Wygłodzenie. " + "Twoje BMI wynosi: " + Math.Round(result, 2);
+                if (result >= 16f && result <= 16.99f)
+                    textBlockResult.Text = "Wychudzenie. " + "Twoje BMI wynosi: " + Math.Round(result, 2);
+                if (result >= 17f && result <= 18.49f)
+                    textBlockResult.Text = "Niedowaga. " + "Twoje BMI wynosi: " + Math.Round(result, 2);
+                if (result >= 18.5f && result <= 29.9f)
+                    textBlockResult.Text = "Waga prawidłowa. " + "Twoje BMI wynosi: " + Math.Round(result, 2);
+                if (result >= 25.0f && result <= 29.99f)
+                    textBlockResult.Text = "Nadwaga. " + "Twoje BMI wynosi: " + Math.Round(result, 2);
+                if (result >= 30.0f && result <= 34.99f)
+                    textBlockResult.Text = "Nadwaga I stopnia. " + "Twoje BMI wynosi: " + Math.Round(result, 2);
+                if (result >= 35.0f && result <= 39.99f)
+                    textBlockResult.Text = "Nadwaga II stopnia. " + "Twoje BMI wynosi: " + Math.Round(result, 2);
+                if (result >= 40.0f)
+                    textBlockResult.Text = "Otyłość skrajna. " + "Twoje BMI wynosi: " + Math.Round(result, 2);
             }
-
-            if (textBoxHeight.Text == "" && textBoxBodyWeight.Text == "")
-                textBlockResult.Text = "Nie podałeś ani wagi ani wzrostu";
-            if (result < 16f )
-                textBlockResult.Text = "Wygłodzenie. " + "Twoje BMI wynosi: " + Math.Round(result,2);
-            if (result >= 16f && result <= 16.99f)
-                textBlockResult.Text = "Wychudzenie. " + "Twoje BMI wynosi: " + Math.Round(result, 2);
-            if (result >=17f && result <=18.49f)
-                textBlockResult.Text = "Niedowaga. " + "Twoje BMI wynosi: " + Math.Round(result, 2);
-            if (result >= 18.5f && result <= 29.9f)
-                textBlockResult.Text = "Waga prawidłowa. " + "Twoje BMI wynosi: " + Math.Round(result, 2);
-            if (result >= 25.0f && result <= 29.99f)
-                textBlockResult.Text = "Nadwaga. " + "Twoje BMI wynosi: " + Math.Round(result, 2);
-            if (result >= 30.0f && result <= 34.99f)
-                textBlockResult.Text = "Nadwaga I stopnia. " + "Twoje BMI wynosi: " + Math.Round(result, 2);
-            if (result >= 35.0f && result <= 39.99f)
-                textBlockResult.Text = "Nadwaga II stopnia. " + "Twoje BMI wynosi: " + Math.Round(result, 2);
-            if (result >= 40.0f)
-                textBlockResult.Text = "Otyłość skrajna. " + "Twoje BMI wynosi: " + Math.Round(result,2);
 
         }
     }

@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Data;
 
 namespace ConvertersWpfApp.Converters
@@ -15,13 +16,13 @@ namespace ConvertersWpfApp.Converters
         {
             if (value is Double doubleValue)
             {
-                //Double double
-                return Math.Round(doubleValue / 255 * 100,2);
+                //Double doubleValue = (Double)value;
+                return doubleValue / 255 * 100;
             }
             return 0;
         }
 
-        //z widoku do kodu
+        //widoku do kodu
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             throw new NotImplementedException();

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SimpleCalculatorMVVMWpfApp
+namespace PersonalQuestionnaireWpfApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -22,7 +22,6 @@ namespace SimpleCalculatorMVVMWpfApp
     {
         public MainWindow()
         {
-            //DataContext = new MainViewModel();
             InitializeComponent();
         }
     }

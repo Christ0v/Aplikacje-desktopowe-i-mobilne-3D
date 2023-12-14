@@ -6,36 +6,28 @@
         xmlns:local="clr-namespace:ConvertersWpfApp"
         xmlns:converters="clr-namespace:ConvertersWpfApp.Converters"
         mc:Ignorable="d"
-        Title="RGB calculator" Height="450" Width="800"
-        Name="thisWindows">
+        Title="MainWindow" Height="450" Width="800"
+        Name="thisWindow">
     <Window.Resources>
         <converters:ColorComponentToColorSaturationPrecentageConverter x:Key="ColorComponentToColorSaturationPrecentageConverter"/>
         <converters:DoublesToColorConverter x:Key="DoublesToColorConverter"/>
     </Window.Resources>
     <StackPanel>
-        <StackPanel.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black"/>
-                <GradientStop Color="#FF595182" Offset="1"/>
-                <GradientStop Color="#FFA7671A" Offset="0"/>
-            </LinearGradientBrush>
-        </StackPanel.Background>
         <WrapPanel>
             <TextBlock Text="Red:" FontSize="20" FontWeight="Bold" Width="100"/>
             <Slider Width="200"
                     Minimum="0"
                     Maximum="255"
-                    Value="{Binding ElementName=thisWindows,Path=RedComponent}"
+                    Value="{Binding ElementName=thisWindow,Path=RedComponent}"
                     TickFrequency="1"
                     TickPlacement="None"
                     IsSnapToTickEnabled="True"/>
-
-            <TextBlock Text="{Binding ElementName=thisWindows
+            <TextBlock Text="{Binding ElementName=thisWindow
                              ,Path=RedComponent
-                             ,StringFormat=Wartość koloru: {0}}"/>
-            <TextBlock Text="{Binding ElementName=thisWindows
+                             ,StringFormat=Wartość koloru {0} }"/>
+            <TextBlock Text="{Binding ElementName=thisWindow
                              ,Path=RedComponent
-                             ,StringFormat=  Procent nasycenia: {0} %
+                             ,StringFormat=Procent nasycenia: {0} %
                              ,Converter={StaticResource ColorComponentToColorSaturationPrecentageConverter}}"/>
         </WrapPanel>
         <WrapPanel>
@@ -43,44 +35,38 @@
             <Slider Width="200"
                     Minimum="0"
                     Maximum="255"
-                    Value="{Binding ElementName=thisWindows,Path=GreenComponent}"
+                    Value="{Binding ElementName=thisWindow,Path=GreenComponent}"
                     TickFrequency="1"
                     TickPlacement="None"
                     IsSnapToTickEnabled="True"/>
-
-            <TextBlock Text="{Binding ElementName=thisWindows
-                 ,Path=GreenComponent
-                 ,StringFormat=Wartość koloru: {0}}"/>
-            <TextBlock Text="{Binding ElementName=thisWindows
-                 ,Path=GreenComponent
-                 ,StringFormat=  Procent nasycenia: {0} %
-                 ,Converter={StaticResource ColorComponentToColorSaturationPrecentageConverter}}"/>
+            <TextBlock Text="{Binding ElementName=thisWindow,Path=GreenComponent}"/>
+            <TextBlock Text="{Binding ElementName=thisWindow
+                             ,Path=GreenComponent
+                             ,StringFormat=Procent nasycenia: {0} %
+                             ,Converter={StaticResource ColorComponentToColorSaturationPrecentageConverter}}"/>
         </WrapPanel>
         <WrapPanel>
             <TextBlock Text="Blue:" FontSize="20" FontWeight="Bold" Width="100"/>
             <Slider Width="200"
                     Minimum="0"
                     Maximum="255"
-                    Value="{Binding ElementName=thisWindows,Path=BlueComponent}"
+                    Value="{Binding ElementName=thisWindow,Path=BlueComponent}"
                     TickFrequency="1"
                     TickPlacement="None"
                     IsSnapToTickEnabled="True"/>
-
-            <TextBlock Text="{Binding ElementName=thisWindows
-                 ,Path=BlueComponent
-                 ,StringFormat=Wartość koloru: {0}}"/>
-            <TextBlock Text="{Binding ElementName=thisWindows
-                 ,Path=BlueComponent
-                 ,StringFormat=  Procent nasycenia: {0} %
-                 ,Converter={StaticResource ColorComponentToColorSaturationPrecentageConverter}}"/>
+            <TextBlock Text="{Binding ElementName=thisWindow,Path=BlueComponent}"/>
+            <TextBlock Text="{Binding ElementName=thisWindow
+                             ,Path=BlueComponent
+                             ,StringFormat=Procent nasycenia: {0} %
+                             ,Converter={StaticResource ColorComponentToColorSaturationPrecentageConverter}}"/>
         </WrapPanel>
-        <Button Content="Ustaw kolor czerwony" Margin="20" Click="Button_Click"/>
+        <Button Content="Ustaw kolor czerwony" Click="Button_Click" Margin="20"/>
         <Rectangle Width="100" Height="100">
             <Rectangle.Fill>
-                <MultiBinding Converter="{StaticResource DoublesToColorConverter}" >
-                    <Binding ElementName="thisWindows" Path="RedComponent" Mode="OneWay"/>
-                    <Binding ElementName="thisWindows" Path="GreenComponent" Mode="OneWay"/>
-                    <Binding ElementName="thisWindows" Path="BlueComponent" Mode="OneWay"/>
+                <MultiBinding Converter="{StaticResource DoublesToColorConverter}">
+                    <Binding ElementName="thisWindow" Path="RedComponent" Mode="OneWay"/>
+                    <Binding ElementName="thisWindow" Path="GreenComponent" Mode="OneWay"/>
+                    <Binding ElementName="thisWindow" Path="BlueComponent" Mode="OneWay"/>
                 </MultiBinding>
             </Rectangle.Fill>
         </Rectangle>

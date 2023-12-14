@@ -5,20 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleCalculatorMVVMWpfApp"
         mc:Ignorable="d"
-        Title="Prosty kalkulator MVVM" Height="450" Width="800">
+        Title="Prosty kalkulator MVVM" Height="450" Width="800"
+        Name="thisWindow">
     <Window.DataContext>
         <local:MainViewModel/>
     </Window.DataContext>
     <StackPanel>
-        <StackPanel.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black" Offset="0.683"/>
-                <GradientStop Color="#FFF79114" Offset="0.052"/>
-            </LinearGradientBrush>
-        </StackPanel.Background>
         <WrapPanel>
             <TextBlock Text="Pierwsza liczba"/>
-            <TextBox Width="200" Margin="10 0 0 0" 
+            <TextBox Width="200" Margin="10 0 0 0"
                      Text="{Binding FirstNumber}"/>
         </WrapPanel>
         <WrapPanel>
@@ -27,12 +22,16 @@
                      Text="{Binding SecondNumber}"/>
         </WrapPanel>
         <WrapPanel>
-            <Button Content="+" Width="50" Height="50" Margin="10" />
-            <Button Content="-" Width="50" Height="50" Margin="10" />
-            <Button Content="*" Width="50" Height="50" Margin="10" />
-            <Button Content="/" Width="50" Height="50" Margin="10" />
+            <Button Content="+" Width="50" Height="50" Margin="10"
+                    Command="{Binding AddCommand}"/>
+            <Button Content="-" Width="50" Height="50" Margin="10"
+                    Command="{Binding SubCommand}"/>
+            <Button Content="*" Width="50" Height="50" Margin="10"
+                    Command="{Binding MulCommand}"/>
+            <Button Content="/" Width="50" Height="50" Margin="10"
+                    Command="{Binding MultiTaskCommand}"
+                    CommandParameter="/"/>
         </WrapPanel>
         <TextBlock Text="{Binding Result}"/>
-
     </StackPanel>
 </Window>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -33,7 +34,6 @@ namespace ConvertersWpfApp
 
         #endregion
 
-
         private double redComponent;
         public double RedComponent
         {
@@ -44,6 +44,7 @@ namespace ConvertersWpfApp
                 OnPropertyChanged(nameof(RedComponent));
             }
         }
+
         private double greenComponent;
         public double GreenComponent
         {
@@ -54,6 +55,7 @@ namespace ConvertersWpfApp
                 OnPropertyChanged(nameof(GreenComponent));
             }
         }
+
         private double blueComponent;
         public double BlueComponent
         {
@@ -64,6 +66,7 @@ namespace ConvertersWpfApp
                 OnPropertyChanged(nameof(BlueComponent));
             }
         }
+
         public MainWindow()
         {
             InitializeComponent();

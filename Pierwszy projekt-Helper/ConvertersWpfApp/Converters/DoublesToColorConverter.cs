@@ -9,22 +9,23 @@ using System.Windows.Media;
 
 namespace ConvertersWpfApp.Converters
 {
-    class DoublesToColorConverter : IMultiValueConverter
+    public class DoublesToColorConverter : IMultiValueConverter
     {
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
             Color color;
-            if (values != null
-                && values.Length == 3 
-                && values[0] is Double 
+            if (values != null 
+                && values.Length == 3
+                && values[0] is Double
                 && values[1] is Double
-                && values[2] is Double)
+                && values[2] is Double
+                )
             {
                 byte red = System.Convert.ToByte((double)values[0]);
                 byte green = System.Convert.ToByte((double)values[1]);
                 byte blue = System.Convert.ToByte((double)values[2]);
                 color = Color.FromRgb(red, green, blue);
-                return new SolidColorBrush(color);  
+                return new SolidColorBrush(color);
             }
             color = Color.FromRgb(0, 0, 0);
             return new SolidColorBrush(color);

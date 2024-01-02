@@ -10,5 +10,23 @@ namespace PersonalQuestionnaireWpfApp.Models
     {
         public string name;
         public bool isPizza;
+        public bool isMale;
+        public bool isFemale;
+        public List<string> listOfDish;
+        public string selectedDish;
+
+        public PersonalDataModel()
+        {
+            name = "";
+            isPizza = false;
+            isMale = false;
+            isFemale = false;
+            listOfDish = new List<string>()
+            { 
+                "rosół","schabowy","mielone","kebab"
+            };
+            selectedDish = listOfDish.First();
+
+        }
     }
 }

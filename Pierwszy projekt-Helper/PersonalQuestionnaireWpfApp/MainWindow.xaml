@@ -25,11 +25,23 @@
         <CheckBox Content="Lubię pizze "
                   Margin=" 0 10"
                   IsChecked="{Binding Pizza}"/>
+        
+        <TextBlock Text="Wybierz płeć: "/>
+        <RadioButton Content="mężczyzna"
+                     IsChecked="{Binding isMale}"/>
+        <RadioButton Content="kobieta"
+                     IsChecked="{Binding isFemale}"/>
+
+        <TextBlock Text="Wybierz ulubione danie: "/>
+        <ComboBox ItemsSource="{Binding ListOfDish}"
+                  SelectedItem="{Binding SelectedDish}"/>
+
         <Button Content="Pobierz dane"
                 HorizontalAlignment="Center"
                 Margin="10"
                 FontSize="20"
                 Command="{Binding DownloadDataComand}"/>
+        
         <TextBlock Text="{Binding QuestionnaireResult}"
                    FontSize="15"
                    Foreground="Aqua"

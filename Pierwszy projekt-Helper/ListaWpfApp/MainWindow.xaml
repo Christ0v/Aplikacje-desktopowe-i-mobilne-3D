@@ -24,12 +24,12 @@
         </WrapPanel>
         <WrapPanel>
             <Button Content="Dodaj"
-                    Command="{Binding DownloadDataComand}"/>
+                    Command="{Binding addCommand}"/>
             <Button Content="Usuń"/>
         </WrapPanel>
         <WrapPanel>
-            <TextBlock
-                Text="{Binding ListResult}"/>
+            <ListBox
+                ItemsSource="{Binding DownloadDataComand}"/>
         </WrapPanel>
 
     </StackPanel>

@@ -11,8 +11,8 @@ namespace ListaWpfApp.Models
     public struct ListOfProduces
     {
         public string productName { get; set; }
-       
-        
+
+
 
     }
 }

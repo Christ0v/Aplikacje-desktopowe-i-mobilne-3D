@@ -1,0 +1,47 @@
+﻿<Window x:Class="ListaZakupowWpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListaZakupowWpfApp"
+        mc:Ignorable="d"
+        Title="Tak to lista zakupów" Height="1000" Width="800 "
+        MinHeight="1000"
+        MaxHeight="1000"
+        MaxWidth="800"
+        MinWidth="800">
+    <StackPanel>
+        <StackPanel.Background>
+            <ImageBrush ImageSource="/shopping-cart-1269175_640.jpg"/>
+        </StackPanel.Background>
+        <TextBlock Text="Lista zakupów" 
+                   FontSize="50" 
+                   HorizontalAlignment="Center"
+                   Background="LightBlue"
+                   />
+        <TextBlock Text="Produkty: "
+                   FontSize="35"/>
+        <TextBlock Name="komunikatTextBlock" 
+                   VerticalAlignment="Top"
+                   FontSize="30"/>
+      
+        <Button Content="Dodaj" 
+                Click="dodaj_Produkt"
+                Width="200"
+                VerticalAlignment="Bottom"/>
+        <Button Content="Usuń" 
+                Click="usun_Produkt" 
+                Width="200"
+                VerticalAlignment="Bottom"/>
+        <TextBox Name="produktTextBox"
+                 FontSize="18"
+                 />
+
+        <ListBox Name="listaZakupowListBox"
+                 FontSize="18 "
+                 MaxHeight=" 800px"/>
+
+
+    </StackPanel>
+   
+</Window>

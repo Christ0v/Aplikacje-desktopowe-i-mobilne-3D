@@ -58,7 +58,7 @@ namespace ListaWpfApp.ViewModels
                     {
                         // string result = "";
                         // result += "Produkty: " + ProductName + "\n";
-                        List<string> list = new List<string>();
+                        //List<string> list = new List<string>();
                         //list.Add("Adam");
                         //foreach (var item in list)
                         //{ 

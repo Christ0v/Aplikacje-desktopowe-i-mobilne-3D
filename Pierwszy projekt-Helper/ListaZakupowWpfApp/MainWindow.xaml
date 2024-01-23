@@ -24,22 +24,31 @@
         <TextBlock Name="komunikatTextBlock" 
                    VerticalAlignment="Top"
                    FontSize="30"/>
-      
-        <Button Content="Dodaj" 
+        <WrapPanel>
+            <Button Content="Dodaj" 
                 Click="dodaj_Produkt"
-                Width="200"
-                VerticalAlignment="Bottom"/>
+                Width="300"
+                VerticalAlignment="Center"/>
         <Button Content="Usuń" 
                 Click="usun_Produkt" 
                 Width="200"
                 VerticalAlignment="Bottom"/>
+        <Button Content="Wyczyść" 
+                Click="wyczysc_Liste" 
+                Width="282"
+                VerticalAlignment="Center"/>
+        </WrapPanel>
         <TextBox Name="produktTextBox"
                  FontSize="18"
+                 Background="LightGray"
                  />
-
+        
         <ListBox Name="listaZakupowListBox"
-                 FontSize="18 "
-                 MaxHeight=" 800px"/>
+                 FontSize="25 "
+                 MaxHeight=" 740px"
+                 Height="740px"
+                 Background="Black"
+                 Foreground ="White"/>
 
 
     </StackPanel>

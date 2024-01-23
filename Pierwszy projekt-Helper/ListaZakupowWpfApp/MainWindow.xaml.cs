@@ -33,14 +33,14 @@ namespace ListaZakupowWpfApp
 
                 komunikatTextBlock.Text = "Nie podano produktu!"; 
                 komunikatTextBlock.Foreground = Brushes.Yellow;
+                
             }
             else
             {
                 
                 listaZakupowListBox.Items.Add(produktTextBox.Text);
-                komunikatTextBlock.Text = "Dodano produkt";
+                komunikatTextBlock.Text = "Dodano produkt!";
                 komunikatTextBlock.Foreground = Brushes.Green;
-                listaZakupowListBox.Background = Brushes.LightBlue;
             }
 
 
@@ -50,19 +50,34 @@ namespace ListaZakupowWpfApp
 
             if (listaZakupowListBox.SelectedItem == null)
             {
-                komunikatTextBlock.Text = "Lista jest prosta lub nie wybrano produktu";
+                komunikatTextBlock.Text = "Lista jest pusta lub nie wybrano produktu.";
                 komunikatTextBlock.Foreground = Brushes.Yellow;
 
             }
             else
             {
                 listaZakupowListBox.Items.Remove(listaZakupowListBox.SelectedItem);
-                komunikatTextBlock.Text = "Usunięto produkt";
+                komunikatTextBlock.Text = "Usunięto produkt.";
                 komunikatTextBlock.Foreground = Brushes.Red;
               
             }
 
 
+        }
+
+        private void wyczysc_Liste(object sender, RoutedEventArgs e)
+        {
+            if (listaZakupowListBox.HasItems == false)
+            {
+                komunikatTextBlock.Text = "Lista jest pusta.";
+                komunikatTextBlock.Foreground = Brushes.Yellow;
+            }
+            else
+            {
+                listaZakupowListBox.Items.Clear();
+                komunikatTextBlock.Text = "Wyczyszczono listę.";
+                komunikatTextBlock.Foreground = Brushes.Red;
+            }
         }
     }
 }

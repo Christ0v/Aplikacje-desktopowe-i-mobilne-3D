@@ -56,7 +56,7 @@ namespace ListaZakupowWpfApp
             }
             else
             {
-                listaZakupowListBox.Items.Remove(listaZakupowListBox.SelectedItem);
+                listaZakupowListBox.Items.RemoveAt(listaZakupowListBox.SelectedIndex);
                 komunikatTextBlock.Text = "Usunięto produkt.";
                 komunikatTextBlock.Foreground = Brushes.Red;
               

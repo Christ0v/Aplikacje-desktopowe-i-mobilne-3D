@@ -14,5 +14,22 @@ namespace FirstApp
         {
             InitializeComponent();
         }
+
+        private void buttonAccept_Clicked(object sender, EventArgs e)
+        {
+            if ((entryPassword.Text == entryPasswordAgain.Text) && entryEmail.Text.Contains('@'))
+            {
+                labelResult.Text = "Witaj " + entryEmail.Text;
+            }
+            if (entryPassword.Text != entryPasswordAgain.Text)
+            {
+                labelResult.Text = "Hasła są różne";
+            }
+            if(!entryEmail.Text.Contains('@'))
+            {
+                labelResult.Text = "Nie poprawny adres e-mail";
+            }
+                   
+        }
     }
 }

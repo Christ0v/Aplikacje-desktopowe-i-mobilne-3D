@@ -17,11 +17,11 @@ namespace FirstApp
 
         private void buttonAccept_Clicked(object sender, EventArgs e)
         {
-            if ((entryPassword.Text == entryPasswordAgain.Text) && entryEmail.Text.Contains('@'))
+            if ((entryPassword.Text == entryConfirmPassword.Text) && entryEmail.Text.Contains('@'))
             {
                 labelResult.Text = "Witaj " + entryEmail.Text;
             }
-            if (entryPassword.Text != entryPasswordAgain.Text)
+            if (entryPassword.Text != entryConfirmPassword.Text)
             {
                 labelResult.Text = "Hasła są różne";
             }

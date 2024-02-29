@@ -23,7 +23,7 @@
                FontSize="16" 
                 />
         <Entry IsPassword="True" 
-               x:Name="entryPasswordAgain"/>
+               x:Name="entryConfirmPassword"/>
         
         <Button Text="ZATWIERDŹ" 
                 x:Name="buttonAccept" 

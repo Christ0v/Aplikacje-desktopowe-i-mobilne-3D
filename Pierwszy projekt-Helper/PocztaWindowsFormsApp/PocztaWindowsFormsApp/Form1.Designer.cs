@@ -166,7 +166,7 @@
             this.buttonCheck.TabIndex = 2;
             this.buttonCheck.Text = "Sprawdź cenę";
             this.buttonCheck.UseVisualStyleBackColor = true;
-            this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
+            this.buttonCheck.Click += new System.EventHandler(this.ButtonCheck_Click);
             // 
             // buttonConfirm
             // 
@@ -176,7 +176,7 @@
             this.buttonConfirm.TabIndex = 3;
             this.buttonConfirm.Text = "Zatwierdź";
             this.buttonConfirm.UseVisualStyleBackColor = true;
-            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
+            this.buttonConfirm.Click += new System.EventHandler(this.ButtonConfirm_Click);
             // 
             // labelWynik
             // 

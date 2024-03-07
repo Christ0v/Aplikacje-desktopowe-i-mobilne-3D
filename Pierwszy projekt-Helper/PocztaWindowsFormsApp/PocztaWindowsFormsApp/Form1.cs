@@ -16,7 +16,7 @@ namespace PocztaWindowsFormsApp
         {
             InitializeComponent();
         }
-        private void buttonCheck_Click(object sender, EventArgs e)
+        private void ButtonCheck_Click(object sender, EventArgs e)
         {
             if (radioButtonPocztowka.Checked)
             {
@@ -35,7 +35,7 @@ namespace PocztaWindowsFormsApp
             }
         }
 
-        private void buttonConfirm_Click(object sender, EventArgs e)
+        private void ButtonConfirm_Click(object sender, EventArgs e)
         {
             int test;
             bool parsujInt = int.TryParse(textBoxKodPocztowy.Text, out test);
